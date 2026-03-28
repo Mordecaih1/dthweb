@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${jakarta.variable} font-sans antialiased text-[#0A1F44] min-h-screen flex flex-col`}>
-        <Preloader />
         <Navbar />
         <main className="flex-grow">
           {children}
