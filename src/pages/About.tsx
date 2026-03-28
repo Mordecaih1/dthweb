@@ -1,7 +1,6 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import { ChevronRight, Target, Eye, Lightbulb, CheckCircle2, HeartHandshake, BookOpen, Search, Code, LayoutDashboard, Rocket, Wrench } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const values = [
@@ -79,12 +78,12 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <AnimatedSection className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border flex-shrink-0">
-              <Image src="/about-1.jpg" alt="Reading DiscoveryTech Hub Brochure" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="/about-1.jpg" alt="Reading DiscoveryTech Hub Brochure" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
             </AnimatedSection>
             
             <AnimatedSection delay={0.2} className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border md:translate-y-12">
-              <Image src="/about-2.jpg" alt="DiscoveryTech Hub Brochure User" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <img src="/about-2.jpg" alt="DiscoveryTech Hub Brochure User" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
             </AnimatedSection>
           </div>
@@ -178,7 +177,7 @@ export default function About() {
         <div className="container mx-auto px-6">
           <AnimatedSection>
              <h2 className="text-3xl font-bold font-jakarta text-primary mb-6">Ready to transform your business?</h2>
-             <Link href="/quote" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl">
+             <Link to="/quote" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl">
                Let's Talk <ChevronRight className="w-5 h-5" />
              </Link>
           </AnimatedSection>

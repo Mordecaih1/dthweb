@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -7,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="col-span-1 md:col-span-2">
           <div className="bg-white/10 p-2 rounded-xl inline-block mb-4 backdrop-blur-sm">
-            <Image src="/logo.png" alt="DiscoveryTech Hub" width={200} height={60} className="w-auto h-12 object-contain" />
+            <img src="/logo.png" alt="DiscoveryTech Hub" width={200} height={60} className="w-auto h-12 object-contain" />
           </div>
           <p className="text-blue-200 mb-6">Where Technology Meets Creativity</p>
           <p className="text-blue-100 mt-4 italic">Let’s build something extraordinary together.</p>
@@ -15,10 +14,10 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-lg mb-4">Quick Links</h4>
           <ul className="space-y-2 text-blue-200">
-            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-            <li><Link href="/quote" className="hover:text-white transition-colors">Get Quote</Link></li>
+            <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+            <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+            <li><Link to="/quote" className="hover:text-white transition-colors">Get Quote</Link></li>
           </ul>
         </div>
         <div>

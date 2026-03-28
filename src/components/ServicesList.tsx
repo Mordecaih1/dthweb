@@ -1,10 +1,9 @@
-"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import { Monitor, GraduationCap, Palette, PenTool, Printer, FileText, Briefcase, X, Check, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -157,7 +156,7 @@ export default function ServicesList() {
                 </ul>
                 
                 <Link 
-                  href={`/quote?service=${encodeURIComponent(activeService.title)}`}
+                  to={`/quote?service=${encodeURIComponent(activeService.title)}`}
                   className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-full font-bold shadow-lg hover:bg-blue-900 transition-colors"
                 >
                   Get Quote

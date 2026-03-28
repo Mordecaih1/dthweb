@@ -1,6 +1,6 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import ServicesList from "@/components/ServicesList";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -34,7 +34,7 @@ export default function Services() {
              <p className="text-blue-200 text-lg max-w-2xl mx-auto mb-8">
                We offer custom solutions tailored to your unique business requirements. Let's discuss your next project.
              </p>
-             <Link href="/quote" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-primary rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">
+             <Link to="/quote" className="inline-flex items-center gap-2 px-10 py-4 bg-white text-primary rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">
                Contact Us Now
              </Link>
           </AnimatedSection>

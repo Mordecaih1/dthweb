@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, MonitorSmartphone, Code, Paintbrush, TrendingUp, Presentation, Users, Briefcase, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -28,12 +27,12 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-primary">
         {/* Background Overlay Image */}
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000" 
-            alt="DiscoveryTech Hub Tech Background" 
-            fill 
-            className="object-cover" 
-            priority
+          <img 
+            src="/hero.jpg" 
+            alt="DiscoveryTech Hub Hero Background" 
+            
+            className="w-full h-full object-cover" 
+           
           />
           <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
         </div>
@@ -57,10 +56,10 @@ export default function Home() {
             </AnimatedSection>
             
             <AnimatedSection delay={0.4} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/quote" className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-500 transition-all shadow-lg hover:shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center justify-center gap-2 border border-blue-500">
+              <Link to="/quote" className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-500 transition-all shadow-lg hover:shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center justify-center gap-2 border border-blue-500">
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/services" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-medium shadow-sm hover:bg-white/20 border border-white/20 transition-all hover:-translate-y-1">
+              <Link to="/services" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-medium shadow-sm hover:bg-white/20 border border-white/20 transition-all hover:-translate-y-1">
                 View Services
               </Link>
             </AnimatedSection>
@@ -92,7 +91,7 @@ export default function Home() {
                 <p className="text-slate-600 leading-relaxed mb-8 text-lg">
                   From web development and branding to ICT training and consultancy, we provide everything you need under one roof.
                 </p>
-                <Link href="/about" className="text-blue-600 font-medium hover:text-blue-800 flex items-center gap-1">
+                <Link to="/about" className="text-blue-600 font-medium hover:text-blue-800 flex items-center gap-1">
                   Learn more about our mission <ArrowRight className="w-4 h-4" />
                 </Link>
               </AnimatedSection>
@@ -155,7 +154,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold font-jakarta text-primary mb-8 max-w-3xl mx-auto leading-tight">
               Let’s build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">extraordinary</span> together.
             </h2>
-            <Link href="/quote" className="inline-flex items-center gap-2 px-10 py-5 bg-primary text-white rounded-full font-bold text-lg hover:bg-blue-900 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+            <Link to="/quote" className="inline-flex items-center gap-2 px-10 py-5 bg-primary text-white rounded-full font-bold text-lg hover:bg-blue-900 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                Get a Quote <ChevronRight className="w-5 h-5" />
             </Link>
           </AnimatedSection>
