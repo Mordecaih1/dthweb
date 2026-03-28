@@ -25,42 +25,42 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-primary">
         {/* Background Overlay Image */}
-        <div className="absolute inset-0 z-0 opacity-15">
+        <div className="absolute inset-0 z-0 opacity-20">
           <Image 
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2000" 
-            alt="DiscoveryTech Hub Business Background" 
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000" 
+            alt="DiscoveryTech Hub Tech Background" 
             fill 
             className="object-cover" 
             priority
           />
-          <div className="absolute inset-0 bg-blue-900/50 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
         </div>
 
         {/* Abstract background blobs */}
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-blue-100 rounded-full blur-[100px] opacity-70 z-0"></div>
-        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[500px] h-[500px] bg-blue-200 rounded-full blur-[100px] opacity-60 z-0"></div>
+        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-blue-600 rounded-full blur-[120px] opacity-40 z-0"></div>
+        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[500px] h-[500px] bg-indigo-600 rounded-full blur-[120px] opacity-30 z-0"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection>
-              <h1 className="text-5xl md:text-7xl font-bold font-jakarta text-primary leading-tight mb-6">
-                Your Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Transformation</span> Partner
+              <h1 className="text-5xl md:text-7xl font-bold font-jakarta text-white leading-tight mb-6">
+                Your Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Transformation</span> Partner
               </h1>
             </AnimatedSection>
             
             <AnimatedSection delay={0.2}>
-              <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Empowering businesses, organizations, and individuals with innovative, affordable, and high-quality technology solutions.
               </p>
             </AnimatedSection>
             
             <AnimatedSection delay={0.4} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/quote" className="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2">
+              <Link href="/quote" className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-500 transition-all shadow-lg hover:shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center justify-center gap-2 border border-blue-500">
                 Get Started <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/services" className="w-full sm:w-auto px-8 py-4 bg-white text-primary rounded-full font-medium shadow-sm hover:shadow-md border border-slate-200 transition-all hover:-translate-y-1">
+              <Link href="/services" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-full font-medium shadow-sm hover:bg-white/20 border border-white/20 transition-all hover:-translate-y-1">
                 View Services
               </Link>
             </AnimatedSection>

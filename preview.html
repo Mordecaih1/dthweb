@@ -27,8 +27,10 @@
 
 <header class="fixed top-0 left-0 right-0 z-50 glassmorphism shadow-sm">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="block text-2xl font-bold font-jakarta text-primary">
-          DiscoveryTech Hub
+        <a href="#" class="flex items-center gap-3">
+          <!-- Checks for logo.png in the folder, falls back to text if missing -->
+          <img src="logo.png" alt="DiscoveryTech Hub" class="h-10 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('logotext').style.display='block';" />
+          <span id="logotext" style="display: none;" class="text-2xl font-bold font-jakarta text-primary">DiscoveryTech Hub</span>
         </a>
         <nav class="hidden md:flex gap-8 items-center font-medium">
           <a href="#" class="text-blue-600 transition-colors">Home</a>
@@ -39,30 +41,27 @@
       </div>
 </header>
 
-<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh]">
-  <div class="absolute inset-0 z-0 opacity-15">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-blue-900/50 mix-blend-multiply"></div>
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-primary">
+  <div class="absolute inset-0 z-0 opacity-20">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
   </div>
 
-  <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-blue-100 rounded-full blur-[100px] opacity-70 z-0"></div>
-  <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[500px] h-[500px] bg-blue-200 rounded-full blur-[100px] opacity-60 z-0"></div>
+  <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-blue-600 rounded-full blur-[120px] opacity-40 z-0"></div>
+  <div class="absolute bottom:0 left-0 translate-y-1/3 -translate-x-1/3 w-[500px] h-[500px] bg-indigo-600 rounded-full blur-[120px] opacity-30 z-0"></div>
   
   <div class="container mx-auto px-6 relative z-10 text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-8 border border-blue-100 shadow-sm">
-      <span>Innovate. Build. Grow.</span>
-    </div>
-    <h1 class="text-5xl md:text-7xl font-bold font-jakarta text-primary leading-tight mb-6">
-      Your Digital <span style="color: transparent; background-clip: text; background-image: linear-gradient(to right, #2563eb, #60a5fa);">Transformation</span> Partner
+    <h1 class="text-5xl md:text-7xl font-bold font-jakarta text-white leading-tight mb-6">
+      Your Digital <span style="color: transparent; background-clip: text; background-image: linear-gradient(to right, #60a5fa, #67e8f9);">Transformation</span> Partner
     </h1>
-    <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+    <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
       Empowering businesses, organizations, and individuals with innovative, affordable, and high-quality technology solutions tailored directly to your unique needs.
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <button class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-900 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
+      <button class="bg-blue-600 text-white border border-blue-500 px-8 py-4 rounded-full font-medium hover:bg-blue-500 transition-all shadow-lg hover:shadow-xl hover:shadow-blue-600/20 hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
         Get Started
       </button>
-      <button class="bg-white text-primary border border-slate-200 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 text-lg shadow-sm hover:shadow-md">
+      <button class="bg-white/10 text-white backdrop-blur-md px-8 py-4 rounded-full font-medium shadow-sm hover:bg-white/20 border border-white/20 transition-all hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
         View Services
       </button>
     </div>
