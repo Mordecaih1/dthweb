@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiscoveryTech Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0A1F44',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+      body { font-family: 'Inter', sans-serif; background-color: #ffffff; margin: 0; }
+      .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+      .glassmorphism { background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 antialiased overflow-x-hidden">
+
+<header class="fixed top-0 left-0 right-0 z-50 glassmorphism shadow-sm">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="block text-2xl font-bold font-jakarta text-primary">
+          DiscoveryTech Hub
+        </a>
+        <nav class="hidden md:flex gap-8 items-center font-medium">
+          <a href="#" class="text-blue-600 transition-colors">Home</a>
+          <a href="#about" class="hover:text-blue-600 transition-colors">About Us</a>
+          <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
+          <a href="#quote" class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-blue-900 transition-all font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5">Get Quote</a>
+        </nav>
+      </div>
+</header>
+
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+  <div class="absolute inset-0 z-0 opacity-15">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-blue-900/50 mix-blend-multiply"></div>
+  </div>
+
+  <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-blue-100 rounded-full blur-[100px] opacity-70 z-0"></div>
+  <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[500px] h-[500px] bg-blue-200 rounded-full blur-[100px] opacity-60 z-0"></div>
+  
+  <div class="container mx-auto px-6 relative z-10 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-medium text-sm mb-8 border border-blue-100 shadow-sm">
+      <span>Innovate. Build. Grow.</span>
+    </div>
+    <h1 class="text-5xl md:text-7xl font-bold font-jakarta text-primary leading-tight mb-6">
+      Your Digital <span style="color: transparent; background-clip: text; background-image: linear-gradient(to right, #2563eb, #60a5fa);">Transformation</span> Partner
+    </h1>
+    <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      Empowering businesses, organizations, and individuals with innovative, affordable, and high-quality technology solutions tailored directly to your unique needs.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <button class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-900 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
+        Get Started
+      </button>
+      <button class="bg-white text-primary border border-slate-200 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 text-lg shadow-sm hover:shadow-md">
+        View Services
+      </button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

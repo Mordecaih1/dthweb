@@ -1,0 +1,189 @@
+import AnimatedSection from "@/components/AnimatedSection";
+import { ChevronRight, Target, Eye, Lightbulb, CheckCircle2, HeartHandshake, BookOpen, Search, Code, LayoutDashboard, Rocket, Wrench } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+
+export default function About() {
+  const values = [
+    { title: "Innovation", desc: "Pushing boundaries with creative solutions", icon: <Lightbulb className="w-8 h-8" /> },
+    { title: "Excellence", desc: "Delivering top-quality results", icon: <CheckCircle2 className="w-8 h-8" /> },
+    { title: "Integrity", desc: "Operating with honesty and transparency", icon: <CheckCircle2 className="w-8 h-8" /> },
+    { title: "Client-Centricity", desc: "Putting clients first", icon: <HeartHandshake className="w-8 h-8" /> },
+    { title: "Collaboration", desc: "Building strong partnerships", icon: <HeartHandshake className="w-8 h-8" /> },
+    { title: "Continuous Learning", desc: "Staying ahead in a fast-changing world", icon: <BookOpen className="w-8 h-8" /> },
+  ];
+
+  const processSteps = [
+    { title: "Discover", subtitle: "We understand your business, audience, and goals", icon: <Search /> },
+    { title: "Strategize", subtitle: "We develop a tailored execution plan", icon: <LayoutDashboard /> },
+    { title: "Design & Develop", subtitle: "We create and build your solution", icon: <Code /> },
+    { title: "Review & Refine", subtitle: "We improve based on feedback", icon: <CheckCircle2 /> },
+    { title: "Deliver & Deploy", subtitle: "We launch your solution", icon: <Rocket /> },
+    { title: "Support & Grow", subtitle: "We provide ongoing support and improvements", icon: <Wrench /> },
+  ];
+
+  return (
+    <div className="flex flex-col min-h-screen pt-20">
+      {/* Page Header */}
+      <section className="bg-primary text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <AnimatedSection>
+            <h1 className="text-5xl md:text-6xl font-bold font-jakarta mb-6">About Us</h1>
+            <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+              We combine creativity, technical expertise, and strategic thinking to deliver measurable impact.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Who We Are & Why We Matter */}
+      <section className="py-24 relative">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <AnimatedSection>
+              <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Who We Are</h2>
+              <h3 className="text-3xl font-bold font-jakarta text-primary mb-6 leading-tight">Driving digital transformation for the modern age</h3>
+              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
+                <p>
+                  DiscoveryTech Hub is a leading ICT solutions company dedicated to driving digital transformation for businesses, organizations, and individuals.
+                </p>
+                <p>
+                  We combine creativity, technical expertise, and strategic thinking to deliver solutions that are not only innovative but also practical and results-driven.
+                </p>
+                <p>
+                  Our team consists of passionate professionals with deep expertise across multiple digital disciplines, ensuring that every project delivers measurable impact.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2} className="bg-slate-50 p-10 rounded-3xl border border-slate-100 shadow-xl relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full blur-[50px] opacity-70"></div>
+               <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2 relative z-10">Why We Matter</h2>
+               <h3 className="text-3xl font-bold font-jakarta text-primary mb-6 relative z-10">Bridging the gap between technology and reality</h3>
+               <div className="space-y-4 text-slate-600 text-lg leading-relaxed relative z-10">
+                 <p>
+                  In today’s digital world, having the right technology partner is critical.
+                 </p>
+                 <p>
+                  At DiscoveryTech Hub, we don’t just deliver services — we create solutions that drive growth, improve efficiency, and position our clients for long-term success.
+                 </p>
+               </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Visual Showcase */}
+      <section className="pb-32 pt-12">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <AnimatedSection className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border flex-shrink-0">
+              <Image src="/about-1.jpg" alt="Reading DiscoveryTech Hub Brochure" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.2} className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border md:translate-y-12">
+              <Image src="/about-2.jpg" alt="DiscoveryTech Hub Brochure User" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500"></div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-24 bg-primary text-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <AnimatedSection className="glassmorphism !bg-white/10 !border-white/20 p-12 rounded-3xl text-center">
+              <Target className="w-16 h-16 mx-auto mb-6 text-blue-300" />
+              <h3 className="text-3xl font-bold font-jakarta mb-6">Our Mission</h3>
+              <p className="text-blue-100 text-lg leading-relaxed">
+                To deliver innovative, affordable, and high-quality digital solutions that empower our clients to grow, compete, and succeed.
+              </p>
+              <p className="text-blue-100 text-lg mt-4 leading-relaxed">
+                We are committed to excellence in every project, combining creativity, technical expertise, and strategic thinking to achieve outstanding results.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection delay={0.2} className="glassmorphism !bg-white/10 !border-white/20 p-12 rounded-3xl text-center">
+              <Eye className="w-16 h-16 mx-auto mb-6 text-blue-300" />
+              <h3 className="text-3xl font-bold font-jakarta mb-6">Our Vision</h3>
+              <p className="text-blue-100 text-lg leading-relaxed">
+                To be the leading ICT solutions provider in Africa, recognized for transforming how businesses, governments, and individuals leverage technology to create value, solve problems, and build a sustainable digital future.
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work Timeline */}
+      <section className="py-32 bg-slate-50">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <AnimatedSection className="text-center mb-20">
+             <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">How We Work</h2>
+             <h3 className="text-4xl font-bold font-jakarta text-primary">A structured, client-centered process</h3>
+          </AnimatedSection>
+          
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-blue-100 transform -translate-x-1/2"></div>
+            
+            {processSteps.map((step, index) => (
+              <AnimatedSection key={index} delay={index * 0.1} className={`relative flex items-center mb-12 md:mb-24 ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"}`}>
+                  <div className="glassmorphism p-8 rounded-2xl shadow-xl border border-slate-100 bg-white group hover:-translate-y-2 transition-transform">
+                    <div className={`w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4 ${index % 2 === 0 ? "md:ml-auto" : ""}`}>
+                      {step.icon}
+                    </div>
+                    <h4 className="text-xl font-bold font-jakarta text-primary mb-2">
+                       <span className="text-blue-600 md:hidden mr-2">{index + 1}.</span>{step.title}
+                    </h4>
+                    <p className="text-slate-600">{step.subtitle}</p>
+                  </div>
+                </div>
+                {/* Center dot */}
+                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary text-white rounded-full items-center justify-center font-bold text-xl font-jakarta border-4 border-slate-50 shadow-md">
+                  {index + 1}
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="text-center mb-16 max-w-2xl mx-auto">
+             <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Core Values</h2>
+             <h3 className="text-4xl font-bold font-jakarta text-primary">What principles drive us</h3>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((v, i) => (
+              <AnimatedSection key={i} delay={i * 0.1} className="p-8 border border-slate-100 shadow-sm rounded-3xl hover:shadow-xl transition-all group flex flex-col items-center text-center">
+                <div className="text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                  {v.icon}
+                </div>
+                <h4 className="text-xl font-bold font-jakarta text-primary mb-3">{v.title}</h4>
+                <p className="text-slate-600">{v.desc}</p>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Footer Banner */}
+      <section className="py-20 bg-blue-50 border-t border-blue-100 text-center">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+             <h2 className="text-3xl font-bold font-jakarta text-primary mb-6">Ready to transform your business?</h2>
+             <Link href="/quote" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-bold hover:bg-blue-900 transition-all shadow-lg hover:shadow-xl">
+               Let's Talk <ChevronRight className="w-5 h-5" />
+             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+    </div>
+  );
+}
