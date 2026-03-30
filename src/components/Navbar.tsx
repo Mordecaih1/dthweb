@@ -4,8 +4,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glassmorphism shadow-sm">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="block">
-          <img src="/logo.png" alt="DiscoveryTech Hub" className="w-auto h-16 md:h-24 object-contain transition-all" />
+        <Link to="/" className="block max-w-[70%]">
+          <img src="/logo.png" alt="DiscoveryTech Hub" className="w-auto h-10 md:h-16 lg:h-24 object-contain transition-all" />
         </Link>
         <nav className="hidden md:flex gap-8 items-center font-medium">
           <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>

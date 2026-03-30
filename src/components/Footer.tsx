@@ -6,11 +6,11 @@ export default function Footer() {
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="col-span-1 md:col-span-2">
-          <div className="bg-white/10 p-2 md:p-3 rounded-xl inline-block mb-6 backdrop-blur-sm shadow-sm transition-all">
-            <img src="/logo.png" alt="DiscoveryTech Hub" className="w-auto h-24 md:h-36 object-contain" />
+          <img src="/logowhite.png" alt="DiscoveryTech Hub" className="w-auto h-24 md:h-36 object-contain drop-shadow-lg lg:-ml-4 relative -left-2" />
+          <div className="relative z-10 -mt-2 md:-mt-8">
+            <p className="text-blue-200 mb-1 font-medium">Where Technology Meets Creativity</p>
+            <p className="text-blue-100 italic">Let’s build something extraordinary together.</p>
           </div>
-          <p className="text-blue-200 mb-6">Where Technology Meets Creativity</p>
-          <p className="text-blue-100 mt-4 italic">Let’s build something extraordinary together.</p>
         </div>
         <div>
           <h4 className="font-bold text-lg mb-4">Quick Links</h4>

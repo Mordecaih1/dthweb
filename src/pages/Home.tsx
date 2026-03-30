@@ -139,15 +139,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {process.map((step, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-white p-8 lg:p-10 rounded-3xl flex items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] border border-transparent hover:border-blue-300 transition-all duration-400 group hover:-translate-y-2 relative overflow-hidden">
-                  <span className="font-jakarta text-5xl lg:text-7xl font-bold text-blue-500 opacity-20 group-hover:opacity-40 transition-opacity min-w-[70px] leading-none absolute md:relative -left-4 md:left-0 top-1/2 -translate-y-1/2 md:translate-y-0">
+                <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-3xl flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] border border-transparent hover:border-blue-300 transition-all duration-400 group hover:-translate-y-2 relative overflow-hidden">
+                  <span className="font-jakarta text-6xl lg:text-7xl font-bold text-blue-500 opacity-[0.08] group-hover:opacity-20 transition-opacity leading-none absolute -right-2 -bottom-2 sm:relative sm:right-auto sm:bottom-auto sm:opacity-20 sm:group-hover:opacity-40 sm:min-w-[70px] z-0 pointer-events-none">
                      {String(i + 1).padStart(2, '0')}
                   </span>
-                  <div className="flex-1 relative z-10 ml-12 md:ml-0">
-                    <h4 className="text-xl lg:text-2xl font-bold font-jakarta text-primary mb-2">{step.title}</h4>
+                  <div className="flex-1 relative z-10 w-full">
+                    <h4 className="text-xl lg:text-2xl font-bold font-jakarta text-primary mb-2 pr-12 sm:pr-0">{step.title}</h4>
                     <p className="text-slate-500 text-sm lg:text-base leading-relaxed m-0">{step.desc}</p>
                   </div>
-                  <div className="ml-auto text-blue-600 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0 relative z-10">
+                  <div className="hidden sm:block ml-auto text-blue-600 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0 relative z-10">
                     {i === process.length - 1 ? (
                        <CheckCircle2 className="w-6 h-6 lg:w-8 lg:h-8" />
                     ) : (

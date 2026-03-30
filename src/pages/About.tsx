@@ -40,17 +40,17 @@ export default function About() {
       <section className="py-24 pt-32 relative">
         <div className="container mx-auto px-6">
           {/* Who We Are block */}
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center mb-32">
-            <AnimatedSection className="w-full md:w-1/2 order-2 md:order-1">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border border-slate-200">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center mb-32">
+            <AnimatedSection className="w-full lg:w-1/2 order-2 lg:order-1">
+              <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl group border border-slate-200">
                 <img src="/about-1.jpg" alt="Who We Are" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
             </AnimatedSection>
             
-            <AnimatedSection className="w-full md:w-1/2 order-1 md:order-2">
+            <AnimatedSection className="w-full lg:w-1/2 order-1 lg:order-2">
               <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Who We Are</h2>
-              <h3 className="text-3xl md:text-4xl font-bold font-jakarta text-primary mb-6 leading-tight">Driving digital transformation for the modern age</h3>
+              <h3 className="text-3xl lg:text-4xl font-bold font-jakarta text-primary mb-6 leading-tight">Driving digital transformation for the modern age</h3>
               <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
                 <p>DiscoveryTech Hub is a leading ICT solutions company dedicated to driving digital transformation for businesses, organizations, and individuals.</p>
                 <p>We combine creativity, technical expertise, and strategic thinking to deliver solutions that are not only innovative but also practical and results-driven.</p>
@@ -60,18 +60,18 @@ export default function About() {
           </div>
 
           {/* Why We Matter block */}
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
-            <AnimatedSection delay={0.2} className="w-full md:w-1/2">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <AnimatedSection delay={0.2} className="w-full lg:w-1/2">
                <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Why We Matter</h2>
-               <h3 className="text-3xl md:text-4xl font-bold font-jakarta text-primary mb-6">Bridging the gap between technology and reality</h3>
+               <h3 className="text-3xl lg:text-4xl font-bold font-jakarta text-primary mb-6">Bridging the gap between technology and reality</h3>
                <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
                  <p>In today’s digital world, having the right technology partner is critical.</p>
                  <p>At DiscoveryTech Hub, we don’t just deliver services — we create solutions that drive growth, improve efficiency, and position our clients for long-term success.</p>
                </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={0.4} className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border border-slate-200 bg-slate-50">
+            <AnimatedSection delay={0.4} className="w-full lg:w-1/2">
+              <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl group border border-slate-200 bg-slate-50">
                 <img src="/about-2.jpg" alt="Why We Matter" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
                 
