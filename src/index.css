@@ -18,15 +18,15 @@ body {
 /* Background overlay with subtle tech elements */
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-  background-size: 32px 32px;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(circle at center, rgba(37, 99, 235, 0.4) 1px, transparent 1px);
+  background-size: 30px 30px;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.15;
   z-index: -1;
 }
 

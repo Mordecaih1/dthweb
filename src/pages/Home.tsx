@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, MonitorSmartphone, Code, Paintbrush, TrendingUp, Presentation, Users, Briefcase, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowDown, CheckCircle2, MonitorSmartphone, Code, Paintbrush, TrendingUp, Presentation, Users, Briefcase, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export default function Home() {
@@ -25,17 +25,18 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-primary">
-        {/* Background Overlay Image */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img 
-            src="/hero.jpg" 
-            alt="DiscoveryTech Hub Hero Background" 
-            
-            className="w-full h-full object-cover" 
-           
-          />
-          <div className="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
+        {/* Background Base Image */}
+        <div className="absolute inset-0 z-0 opacity-30">
+          <img src="/hero.jpg" alt="DiscoveryTech Hub Hero Background" className="w-full h-full object-cover" />
         </div>
+        
+        {/* Futuristic Tech Circuit Overlay */}
+        <div className="absolute inset-0 z-0 opacity-[0.10] mix-blend-overlay">
+          <img src="/hero1.jpg" alt="Tech Overlay" className="w-full h-full object-cover" />
+        </div>
+
+        {/* Global Dark Gradient */}
+        <div className="absolute inset-0 z-0 bg-blue-900/70 mix-blend-multiply"></div>
 
         {/* Abstract background blobs */}
         <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[600px] h-[600px] bg-blue-600 rounded-full blur-[120px] opacity-40 z-0"></div>
@@ -72,11 +73,14 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <AnimatedSection className="w-full md:w-1/2">
-              <div className="aspect-square rounded-3xl bg-gradient-to-tr from-blue-100 to-indigo-50 border border-white shadow-xl flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
-                <div className="glassmorphism p-8 rounded-2xl max-w-xs text-center border-white">
-                  <MonitorSmartphone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold font-jakarta mb-2">End-to-End Solutions</h3>
+              <div className="aspect-square rounded-3xl border border-white shadow-2xl relative overflow-hidden flex items-end justify-center group">
+                <img src="/image1.jpg" alt="End-to-End Solutions" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                
+                <div className="glassmorphism p-6 m-8 rounded-2xl w-full max-w-sm text-center border-white z-10 shadow-xl backdrop-blur-md relative overflow-hidden transition-transform hover:-translate-y-2">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-blue-100/50 rounded-full blur-xl"></div>
+                  <MonitorSmartphone className="w-12 h-12 text-blue-600 mx-auto mb-4 relative z-10" />
+                  <h3 className="text-xl font-bold font-jakarta mb-2 text-primary relative z-10">End-to-End Solutions</h3>
                 </div>
               </div>
             </AnimatedSection>
@@ -124,21 +128,31 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-primary text-white relative">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-slate-50 relative">
+        <div className="container mx-auto px-6 max-w-6xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-             <h2 className="text-blue-300 font-bold tracking-wider uppercase text-sm mb-2">Our Process</h2>
-             <h3 className="text-3xl md:text-4xl font-bold font-jakarta border-b border-blue-800 pb-8 inline-block">How We Make It Happen</h3>
+             <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Our Process</h2>
+             <h3 className="text-4xl md:text-5xl font-bold font-jakarta text-primary mb-4">How We Make It Happen</h3>
+             <p className="text-slate-500 text-lg">A clear process designed to feel supportive, transparent, and joyful from our first meeting to launch.</p>
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {process.map((step, i) => (
-              <AnimatedSection key={i} delay={i * 0.1} className="relative">
-                <div className="flex flex-col">
-                  <span className="text-6xl font-black font-jakarta text-blue-800 absolute -top-10 -left-4 opacity-50 z-0">{i + 1}</span>
-                  <div className="relative z-10 bg-blue-900/40 p-8 rounded-2xl border border-blue-800/50 backdrop-blur-md hover:bg-blue-800/60 transition-colors">
-                    <h4 className="text-xl font-bold mb-2 font-jakarta text-blue-100">{step.title}</h4>
-                    <p className="text-blue-300">{step.desc}</p>
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="bg-white p-8 lg:p-10 rounded-3xl flex items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.08)] border border-transparent hover:border-blue-300 transition-all duration-400 group hover:-translate-y-2 relative overflow-hidden">
+                  <span className="font-jakarta text-5xl lg:text-7xl font-bold text-blue-500 opacity-20 group-hover:opacity-40 transition-opacity min-w-[70px] leading-none absolute md:relative -left-4 md:left-0 top-1/2 -translate-y-1/2 md:translate-y-0">
+                     {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="flex-1 relative z-10 ml-12 md:ml-0">
+                    <h4 className="text-xl lg:text-2xl font-bold font-jakarta text-primary mb-2">{step.title}</h4>
+                    <p className="text-slate-500 text-sm lg:text-base leading-relaxed m-0">{step.desc}</p>
+                  </div>
+                  <div className="ml-auto text-blue-600 group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0 relative z-10">
+                    {i === process.length - 1 ? (
+                       <CheckCircle2 className="w-6 h-6 lg:w-8 lg:h-8" />
+                    ) : (
+                       <ArrowRight className="w-6 h-6 lg:w-8 lg:h-8" />
+                    )}
                   </div>
                 </div>
               </AnimatedSection>

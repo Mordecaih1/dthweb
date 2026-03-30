@@ -6,8 +6,8 @@ export default function Quote() {
   return (
     <div className="flex flex-col min-h-screen pt-20">
       {/* Page Header */}
-      <section className="bg-primary text-white py-24 relative overflow-hidden">
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
+      <section className="bg-primary text-white py-24 pb-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/hero1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <AnimatedSection>
             <h1 className="text-5xl md:text-6xl font-bold font-jakarta mb-6">Get a Quote</h1>
