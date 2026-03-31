@@ -49,7 +49,7 @@ const services = [
     fullDesc: "We deliver high-quality printing solutions with fast turnaround times. From business cards to large-format prints, we ensure sharp and vibrant results.",
     icon: <Printer className="w-8 h-8" />,
     features: ["Digital & offset printing", "Business cards & stationery", "Banners & signage", "Branded merchandise"],
-    image: "https://images.unsplash.com/photo-1601247348982-fdbad2cc1e38?auto=format&fit=crop&q=80&w=800"
+    image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 6,
@@ -96,6 +96,13 @@ export default function ServicesList() {
                 </button>
              </div>
           </AnimatedSection>
+        ))}
+      </div>
+
+      {/* Hidden Asset Preloader: Background loads all Unsplash images so they instantly appear when the popup is clicked */}
+      <div className="hidden" aria-hidden="true">
+        {services.map(service => (
+          <img key={`preload-${service.id}`} src={service.image} alt="" decoding="async" />
         ))}
       </div>
 
