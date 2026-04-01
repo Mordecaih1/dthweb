@@ -52,9 +52,9 @@ export default function About() {
               <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Who We Are</h2>
               <h3 className="text-3xl lg:text-4xl font-bold font-jakarta text-primary mb-6 leading-tight">Driving digital transformation for the modern age</h3>
               <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-                <p>DiscoveryTech Hub is a leading ICT solutions company dedicated to driving digital transformation for businesses, organizations, and individuals.</p>
-                <p>We combine creativity, technical expertise, and strategic thinking to deliver solutions that are not only innovative but also practical and results-driven.</p>
-                <p>Our team consists of passionate professionals with deep expertise across multiple digital disciplines, ensuring that every project delivers measurable impact.</p>
+                <p>DiscoveryTech Hub is a premier ICT solutions company operating at the intersection of technology, creativity, and education, dedicated to driving digital transformation for businesses, organizations, and individuals. We deliver end-to-end digital solutions that combine innovation, strategy, and technical expertise to build systems that are practical, scalable, and results-driven.</p>
+                <p>Our team of passionate professionals brings deep expertise across multiple digital disciplines, including software development, IT consulting, digital marketing, and tech education, ensuring every project delivers measurable impact, improved efficiency, and long-term value in today’s rapidly evolving digital landscape.</p>
+          
               </div>
             </AnimatedSection>
           </div>
@@ -65,8 +65,8 @@ export default function About() {
                <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Why We Matter</h2>
                <h3 className="text-3xl lg:text-4xl font-bold font-jakarta text-primary mb-6">Bridging the gap between technology and reality</h3>
                <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-                 <p>In today’s digital world, having the right technology partner is critical.</p>
-                 <p>At DiscoveryTech Hub, we don’t just deliver services — we create solutions that drive growth, improve efficiency, and position our clients for long-term success.</p>
+                 <p>In today’s fast-evolving digital landscape, having the right technology partner is essential to achieving sustainable growth and competitive advantage.</p>
+                 <p>At DiscoveryTech Hub, we go beyond service delivery to design and implement tailored solutions that drive innovation, enhance operational efficiency, and position our clients for long-term success.</p>
                </div>
             </AnimatedSection>
             
