@@ -30,7 +30,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="hover:opacity-80 transition-opacity">
-          <img src="/logo.png" alt="DiscoveryTech Hub" className="h-10 w-auto object-contain" />
+          <img src="/logonav.png" alt="DiscoveryTech Hub" className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
