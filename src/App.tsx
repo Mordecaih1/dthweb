@@ -96,4 +96,62 @@ function App() {
                 <p className="text-xs text-slate-400">Last updated: April 2026</p>
 
                 <div>
-                  <h3 className="font-semibold text-[#0A1F44] mb-1">1. Int
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">1. Introduction</h3>
+                  <p>DiscoveryTech Hub ("we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit discoverytechhub.com.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">2. Information We Collect</h3>
+                  <p>We may collect personal information you provide directly to us, including your name, email address, phone number, and any other details you submit via our contact or quote forms.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">3. How We Use Your Information</h3>
+                  <p>We use the information we collect to respond to your enquiries, provide our services, improve our website experience, and communicate with you about our offerings.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">4. Cookies</h3>
+                  <p>We use cookies to enhance your browsing experience on our website. Cookies are small files stored on your device that help us understand how visitors interact with our site. You may choose to decline cookies, though some features of the site may not function properly.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">5. Data Sharing</h3>
+                  <p>We do not sell, trade, or rent your personal information to third parties. Your data is only used internally to serve you better.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">6. Data Security</h3>
+                  <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, or disclosure.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">7. Your Rights</h3>
+                  <p>You have the right to request access to, correction of, or deletion of your personal data at any time. To exercise these rights, please contact us at info@discoverytechhub.com.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">8. Contact Us</h3>
+                  <p>If you have any questions about this Privacy Policy, please reach out to us at <a href="mailto:info@discoverytechhub.com" className="text-blue-600 underline">info@discoverytechhub.com</a>.</p>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="px-6 py-4 border-t border-slate-100 flex justify-end">
+                <button
+                  onClick={() => setShowPrivacy(false)}
+                  className="px-6 py-2 bg-[#0A1F44] text-white rounded-full text-sm font-semibold hover:bg-blue-900 transition-all"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+      </div>
+    </Router>
+  );
+}
+
+export default App;
