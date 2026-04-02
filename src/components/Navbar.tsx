@@ -25,9 +25,9 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm border-b border-slate-100">
       <div className="container mx-auto px-6 h-16 flex justify-between items-center">
-        
+
         {/* Logo */}
         <Link to="/" className="hover:opacity-80 transition-opacity">
           <img src="/logo.png" alt="DiscoveryTech Hub" className="h-10 w-auto object-contain" />
@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           type="button"
-          className="md:hidden z-[60] p-2 text-primary hover:bg-slate-100 rounded-lg transition-colors"
+          className="md:hidden relative z-[60] p-2 text-primary bg-white hover:bg-slate-100 rounded-lg transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -73,7 +73,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="md:hidden fixed top-16 left-0 right-0 bg-white border-t border-slate-100 shadow-xl z-50 px-6 py-4"
+            className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-white border-t border-slate-100 shadow-xl z-50 px-6 py-6 overflow-y-auto"
           >
             {/* Nav Links */}
             <nav className="flex flex-col">
@@ -103,7 +103,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.25 }}
-                className="pt-4"
+                className="pt-6"
               >
                 <Link
                   to="/quote"
@@ -112,6 +112,21 @@ export default function Navbar() {
                 >
                   Get Quote
                 </Link>
+              </motion.div>
+
+              {/* Close Button */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="pt-4"
+              >
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full py-3 text-center text-slate-500 border border-slate-200 rounded-full font-medium text-base hover:bg-slate-50 transition-colors"
+                >
+                  Close Menu
+                </button>
               </motion.div>
             </nav>
           </motion.div>
