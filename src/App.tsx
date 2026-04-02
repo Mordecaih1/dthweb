@@ -9,9 +9,11 @@ import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Services from '@/pages/Services';
 import Quote from '@/pages/Quote';
+import { X } from 'lucide-react';
 
 function App() {
   const [showCookie, setShowCookie] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
 
   useEffect(() => {
     const accepted = localStorage.getItem('cookieAccepted');
@@ -50,7 +52,12 @@ function App() {
           <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0A1F44] text-white px-6 py-4 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-200 max-w-2xl">
               🍪 We use cookies to improve your experience on our website. By continuing to browse, you agree to our{' '}
-              <a href="/privacy" className="underline text-blue-300 hover:text-blue-200">Privacy Policy</a>.
+              <button
+                onClick={() => setShowPrivacy(true)}
+                className="underline text-blue-300 hover:text-blue-200 cursor-pointer"
+              >
+                Privacy Policy
+              </button>.
             </p>
             <div className="flex gap-3 shrink-0">
               <button
@@ -68,9 +75,25 @@ function App() {
             </div>
           </div>
         )}
-      </div>
-    </Router>
-  );
-}
 
-export default App;
+        {/* Privacy Policy Modal */}
+        {showPrivacy && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+              {/* Header */}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 sticky top-0 bg-white rounded-t-2xl">
+                <h2 className="text-xl font-bold text-[#0A1F44]">Privacy Policy</h2>
+                <button
+                  onClick={() => setShowPrivacy(false)}
+                  className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+                >
+                  <X className="w-5 h-5 text-slate-500" />
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="px-6 py-6 text-sm text-slate-600 space-y-5 leading-relaxed">
+                <p className="text-xs text-slate-400">Last updated: April 2026</p>
+
+                <div>
+                  <h3 className="font-semibold text-[#0A1F44] mb-1">1. Int
