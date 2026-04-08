@@ -1,10 +1,31 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import ServicesList from "@/components/ServicesList";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Services() {
   return (
     <div className="flex flex-col min-h-screen pt-20">
+      <Helmet>
+  <title>Our Services | DiscoveryTech Hub</title>
+  <meta name="description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
+  <link rel="canonical" href="https://discoverytechhub.com/services" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discoverytechhub.com/services" />
+  <meta property="og:title" content="Our Services | DiscoveryTech Hub" />
+  <meta property="og:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
+  <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+
+  {/* Twitter */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://discoverytechhub.com/services" />
+  <meta property="twitter:title" content="Our Services | DiscoveryTech Hub" />
+  <meta property="twitter:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
+  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+</Helmet>
+
       {/* Page Header */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/hero1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>

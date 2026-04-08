@@ -1,6 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import { ChevronRight, Target, Eye, Lightbulb, CheckCircle2, HeartHandshake, BookOpen, Search, Code, LayoutDashboard, Rocket, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   const values = [
@@ -23,6 +24,26 @@ export default function About() {
 
   return (
     <div className="flex flex-col min-h-screen pt-20">
+     <Helmet>
+  <title>About Us | DiscoveryTech Hub</title>
+  <meta name="description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
+  <link rel="canonical" href="https://discoverytechhub.com/about" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discoverytechhub.com/about" />
+  <meta property="og:title" content="About Us | DiscoveryTech Hub" />
+  <meta property="og:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
+  <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+
+  {/* Twitter */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://discoverytechhub.com/about" />
+  <meta property="twitter:title" content="About Us | DiscoveryTech Hub" />
+  <meta property="twitter:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
+  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+</Helmet>
+
       {/* Page Header */}
       <section className="bg-primary text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
@@ -53,8 +74,7 @@ export default function About() {
               <h3 className="text-3xl lg:text-4xl font-bold font-jakarta text-primary mb-6 leading-tight">Driving digital transformation for the modern age</h3>
               <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
                 <p>DiscoveryTech Hub is a premier ICT solutions company operating at the intersection of technology, creativity, and education, dedicated to driving digital transformation for businesses, organizations, and individuals. We deliver end-to-end digital solutions that combine innovation, strategy, and technical expertise to build systems that are practical, scalable, and results-driven.</p>
-                <p>Our team of passionate professionals brings deep expertise across multiple digital disciplines, including software development, IT consulting, digital marketing, and tech education, ensuring every project delivers measurable impact, improved efficiency, and long-term value in today’s rapidly evolving digital landscape.</p>
-          
+                <p>Our team of passionate professionals brings deep expertise across multiple digital disciplines, including software development, IT consulting, digital marketing, and tech education, ensuring every project delivers measurable impact, improved efficiency, and long-term value in today's rapidly evolving digital landscape.</p>
               </div>
             </AnimatedSection>
           </div>
@@ -65,7 +85,7 @@ export default function About() {
                <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-2">Why We Matter</h2>
                <h3 className="text-3xl lg:text-4xl font-bold font-jakarta text-primary mb-6">Bridging the gap between technology and reality</h3>
                <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-                 <p>In today’s fast-evolving digital landscape, having the right technology partner is essential to achieving sustainable growth and competitive advantage.</p>
+                 <p>In today's fast-evolving digital landscape, having the right technology partner is essential to achieving sustainable growth and competitive advantage.</p>
                  <p>At DiscoveryTech Hub, we go beyond service delivery to design and implement tailored solutions that drive innovation, enhance operational efficiency, and position our clients for long-term success.</p>
                </div>
             </AnimatedSection>
@@ -74,8 +94,6 @@ export default function About() {
               <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl group border border-slate-200 bg-slate-50">
                 <img src="/about-2.jpg" alt="Why We Matter" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                
-                {/* Decorative element */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-100 rounded-full blur-[50px] opacity-70 pointer-events-none"></div>
               </div>
             </AnimatedSection>
@@ -123,7 +141,6 @@ export default function About() {
           </AnimatedSection>
           
           <div className="relative">
-            {/* Timeline Line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-blue-100 transform -translate-x-1/2"></div>
             
             {processSteps.map((step, index) => (
@@ -139,7 +156,6 @@ export default function About() {
                     <p className="text-slate-600">{step.subtitle}</p>
                   </div>
                 </div>
-                {/* Center dot */}
                 <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary text-white rounded-full items-center justify-center font-bold text-xl font-jakarta border-4 border-slate-50 shadow-md">
                   {index + 1}
                 </div>

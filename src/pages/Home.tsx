@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowDown, CheckCircle2, MonitorSmartphone, Code, Paintbrush, TrendingUp, Presentation, Users, Briefcase, ChevronRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const whyChooseUs = [
@@ -23,6 +24,26 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+  <title>DiscoveryTech Hub | Your Digital Transformation Partner</title>
+  <meta name="description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
+  <link rel="canonical" href="https://discoverytechhub.com/" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discoverytechhub.com/" />
+  <meta property="og:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
+  <meta property="og:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
+  <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+
+  {/* Twitter */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://discoverytechhub.com/" />
+  <meta property="twitter:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
+  <meta property="twitter:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
+  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+</Helmet>
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-primary">
         {/* Background Base Image */}
@@ -166,7 +187,7 @@ export default function Home() {
         <div className="container mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="text-4xl md:text-5xl font-bold font-jakarta text-primary mb-8 max-w-3xl mx-auto leading-tight">
-              Let’s build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">extraordinary</span> together.
+              Let's build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">extraordinary</span> together.
             </h2>
             <Link to="/quote" className="inline-flex items-center gap-2 px-10 py-5 bg-primary text-white rounded-full font-bold text-lg hover:bg-blue-900 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
                Get a Quote <ChevronRight className="w-5 h-5" />

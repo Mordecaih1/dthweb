@@ -1,10 +1,31 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import { Mail, MapPin, Globe, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Quote() {
   return (
     <div className="flex flex-col min-h-screen pt-20">
+     <Helmet>
+  <title>Get a Quote | DiscoveryTech Hub</title>
+  <meta name="description" content="Request a free quote from DiscoveryTech Hub for web design, ICT training, graphic design, branding, and more." />
+  <link rel="canonical" href="https://discoverytechhub.com/quote" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://discoverytechhub.com/quote" />
+  <meta property="og:title" content="Get a Quote | DiscoveryTech Hub" />
+  <meta property="og:description" content="Request a free quote from DiscoveryTech Hub for web design, ICT training, graphic design, branding, and more." />
+  <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+
+  {/* Twitter */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://discoverytechhub.com/quote" />
+  <meta property="twitter:title" content="Get a Quote | DiscoveryTech Hub" />
+  <meta property="twitter:description" content="Request a free quote from DiscoveryTech Hub for web design, ICT training, graphic design, branding, and more." />
+  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+</Helmet>
+
       {/* Page Header */}
       <section className="bg-primary text-white py-24 pb-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/hero1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
@@ -12,7 +33,7 @@ export default function Quote() {
           <AnimatedSection>
             <h1 className="text-5xl md:text-6xl font-bold font-jakarta mb-6">Get a Quote</h1>
             <p className="text-xl text-blue-200 max-w-2xl mx-auto leading-relaxed">
-              Have a project in mind or need a service? Let’s help you bring your ideas to life.
+              Have a project in mind or need a service? Let's help you bring your ideas to life.
             </p>
           </AnimatedSection>
         </div>
@@ -25,7 +46,6 @@ export default function Quote() {
             
             {/* Contact Info Sidebar */}
             <div className="bg-blue-900 text-white p-12 flex flex-col relative overflow-hidden">
-              {/* Decorative circles */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-800 rounded-full blur-[60px] translate-x-1/2 -translate-y-1/2 opacity-50"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/3 opacity-30"></div>
               
