@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
@@ -33,6 +33,34 @@ function App() {
 
   return (
     <HelmetProvider>
+      {/* Global fallback — overridden by each page's own Helmet */}
+      <Helmet>
+        <title>DiscoveryTech Hub | Your Digital Transformation Partner</title>
+        <meta name="description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria." />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="DiscoveryTech Hub" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="DiscoveryTech Hub" />
+        <meta property="og:url" content="https://discoverytechhub.com/" />
+        <meta property="og:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
+        <meta property="og:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria." />
+        <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="DiscoveryTech Hub - Your Digital Transformation Partner" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@discoverytechhub" />
+        <meta name="twitter:url" content="https://discoverytechhub.com/" />
+        <meta name="twitter:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
+        <meta name="twitter:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria." />
+        <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+        <meta name="twitter:image:alt" content="DiscoveryTech Hub - Your Digital Transformation Partner" />
+      </Helmet>
+
       <Router>
         <ScrollToTop />
         <div className="font-sans antialiased text-[#0A1F44] flex flex-col min-h-screen relative" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -82,7 +110,6 @@ function App() {
           {showPrivacy && (
             <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4">
               <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-                {/* Header */}
                 <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 sticky top-0 bg-white rounded-t-2xl">
                   <h2 className="text-xl font-bold text-[#0A1F44]">Privacy Policy</h2>
                   <button
@@ -93,7 +120,6 @@ function App() {
                   </button>
                 </div>
 
-                {/* Content */}
                 <div className="px-6 py-6 text-sm text-slate-600 space-y-5 leading-relaxed">
                   <p className="text-xs text-slate-400">Last updated: April 2026</p>
 
@@ -138,7 +164,6 @@ function App() {
                   </div>
                 </div>
 
-                {/* Footer */}
                 <div className="px-6 py-4 border-t border-slate-100 flex justify-end">
                   <button
                     onClick={() => setShowPrivacy(false)}

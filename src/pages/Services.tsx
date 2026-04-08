@@ -6,24 +6,24 @@ import { Helmet } from "react-helmet-async";
 export default function Services() {
   return (
     <div className="flex flex-col min-h-screen pt-20">
-      <Helmet>
+     <Helmet>
   <title>Our Services | DiscoveryTech Hub</title>
   <meta name="description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
   <link rel="canonical" href="https://discoverytechhub.com/services" />
-
-  {/* Open Graph */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://discoverytechhub.com/services" />
   <meta property="og:title" content="Our Services | DiscoveryTech Hub" />
   <meta property="og:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
   <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
-
-  {/* Twitter */}
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://discoverytechhub.com/services" />
-  <meta property="twitter:title" content="Our Services | DiscoveryTech Hub" />
-  <meta property="twitter:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
-  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="DiscoveryTech Hub Services - Web Design, ICT Training & More" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://discoverytechhub.com/services" />
+  <meta name="twitter:title" content="Our Services | DiscoveryTech Hub" />
+  <meta name="twitter:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
+  <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+  <meta name="twitter:image:alt" content="DiscoveryTech Hub Services - Web Design, ICT Training & More" />
 </Helmet>
 
       {/* Page Header */}

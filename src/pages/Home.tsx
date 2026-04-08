@@ -24,26 +24,25 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Helmet>
+     <Helmet>
   <title>DiscoveryTech Hub | Your Digital Transformation Partner</title>
   <meta name="description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
   <link rel="canonical" href="https://discoverytechhub.com/" />
-
-  {/* Open Graph */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://discoverytechhub.com/" />
   <meta property="og:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
   <meta property="og:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
   <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
-
-  {/* Twitter */}
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://discoverytechhub.com/" />
-  <meta property="twitter:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
-  <meta property="twitter:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
-  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="DiscoveryTech Hub - Your Digital Transformation Partner" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://discoverytechhub.com/" />
+  <meta name="twitter:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
+  <meta name="twitter:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
+  <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+  <meta name="twitter:image:alt" content="DiscoveryTech Hub - Your Digital Transformation Partner" />
 </Helmet>
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-primary">
         {/* Background Base Image */}

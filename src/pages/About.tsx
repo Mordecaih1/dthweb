@@ -24,24 +24,24 @@ export default function About() {
 
   return (
     <div className="flex flex-col min-h-screen pt-20">
-     <Helmet>
+    <Helmet>
   <title>About Us | DiscoveryTech Hub</title>
   <meta name="description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
   <link rel="canonical" href="https://discoverytechhub.com/about" />
-
-  {/* Open Graph */}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://discoverytechhub.com/about" />
   <meta property="og:title" content="About Us | DiscoveryTech Hub" />
   <meta property="og:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
   <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
-
-  {/* Twitter */}
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://discoverytechhub.com/about" />
-  <meta property="twitter:title" content="About Us | DiscoveryTech Hub" />
-  <meta property="twitter:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
-  <meta property="twitter:image" content="https://discoverytechhub.com/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="About DiscoveryTech Hub - ICT Solutions in Nigeria" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://discoverytechhub.com/about" />
+  <meta name="twitter:title" content="About Us | DiscoveryTech Hub" />
+  <meta name="twitter:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
+  <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+  <meta name="twitter:image:alt" content="About DiscoveryTech Hub - ICT Solutions in Nigeria" />
 </Helmet>
 
       {/* Page Header */}
