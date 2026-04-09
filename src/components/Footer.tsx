@@ -27,56 +27,36 @@ export default function Footer() {
           <h4 className="font-bold text-xl mb-6 font-jakarta">Contact Information</h4>
           <ul className="space-y-4 text-blue-200 dark:text-blue-300 mb-8">
             <li className="flex items-start gap-3">
-              <Phone className="w-5 h-5 text-blue-400 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+              <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
               <span>+2349047465802 <br /> +2348076854730</span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-blue-400 dark:text-blue-400 flex-shrink-0" />
+              <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
               <a href="mailto:info@discoverytechhub.com" className="hover:text-white transition-colors cursor-pointer">
                 info@discoverytechhub.com
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-blue-400 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+              <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
               <span>Abuja, Nigeria and Remote</span>
             </li>
           </ul>
 
           <h4 className="font-bold text-lg mb-4 font-jakarta">Connect with us</h4>
           <div className="flex items-center gap-3">
-            
-              href="https://web.facebook.com/disctechhub"
-              target="_blank" rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30"
-            >
+            <a href="https://web.facebook.com/disctechhub" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30">
               <Facebook className="w-5 h-5" />
             </a>
-            
-              href="https://x.com/disctechhub"
-              target="_blank" rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-black hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30"
-            >
+            <a href="https://x.com/disctechhub" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-black hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30">
               <Twitter className="w-5 h-5" />
             </a>
-            
-              href="https://www.linkedin.com/company/discoverytechhub"
-              target="_blank" rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30"
-            >
+            <a href="https://www.linkedin.com/company/discoverytechhub" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-blue-600 hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30">
               <Linkedin className="w-5 h-5" />
             </a>
-            
-              href="https://www.instagram.com/discoverytechhub"
-              target="_blank" rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-pink-600 hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30"
-            >
+            <a href="https://www.instagram.com/discoverytechhub" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-pink-600 hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30">
               <Instagram className="w-5 h-5" />
             </a>
-            
-              href="http://tiktok.com/@discoverytechhub"
-              target="_blank" rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-black hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30"
-            >
+            <a href="http://tiktok.com/@discoverytechhub" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-blue-900/50 dark:bg-blue-950/60 flex items-center justify-center text-blue-300 hover:bg-black hover:text-white hover:-translate-y-1 transition-all shadow border border-blue-800/30">
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68a6.34 6.34 0 0012.67-1.48V8.63a8.31 8.31 0 004.77 1.52v-3.4a4.85 4.85 0 01-2.85-1.06z" />
               </svg>
