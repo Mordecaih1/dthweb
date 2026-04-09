@@ -15,9 +15,9 @@ type FormData = {
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  
+
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
-  
+
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
@@ -41,24 +41,24 @@ export default function ContactForm() {
     }
   };
 
-  const inputClass = "w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all";
-  const labelClass = "block text-sm font-medium text-slate-700 mb-2";
+  const inputClass = "w-full bg-slate-50 dark:bg-gray-700 border border-slate-200 dark:border-gray-600 rounded-xl px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 transition-all text-slate-800 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500";
+  const labelClass = "block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2";
 
   return (
     <div className="relative">
       <AnimatePresence>
         {isSuccess && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/90 backdrop-blur-sm rounded-xl border border-green-100"
+            className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl border border-green-100 dark:border-green-900"
           >
-            <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+            <div className="w-16 h-16 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-4">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2 font-jakarta">Message Sent!</h3>
-            <p className="text-slate-600 text-center max-w-xs">
+            <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2 font-jakarta">Message Sent!</h3>
+            <p className="text-slate-600 dark:text-slate-300 text-center max-w-xs">
               Thank you for reaching out. Our team will get back to you shortly.
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
           {/* Full Name */}
           <div>
             <label className={labelClass}>Full Name</label>
-            <input 
+            <input
               {...register("fullName", { required: "Full Name is required" })}
               className={`${inputClass} ${errors.fullName ? "border-red-500 focus:ring-red-100" : ""}`}
               placeholder="John Doe"
@@ -81,9 +81,9 @@ export default function ContactForm() {
           {/* Email */}
           <div>
             <label className={labelClass}>Email Address</label>
-            <input 
+            <input
               type="email"
-              {...register("email", { 
+              {...register("email", {
                 required: "Email is required",
                 pattern: { value: /^\S+@\S+$/i, message: "Invalid email" }
               })}
@@ -96,7 +96,7 @@ export default function ContactForm() {
           {/* Phone */}
           <div>
             <label className={labelClass}>Phone Number</label>
-            <input 
+            <input
               {...register("phone", { required: "Phone is required" })}
               className={`${inputClass} ${errors.phone ? "border-red-500 focus:ring-red-100" : ""}`}
               placeholder="+234 123 456 7890"
@@ -107,9 +107,9 @@ export default function ContactForm() {
           {/* Service Needed */}
           <div>
             <label className={labelClass}>Service Needed</label>
-            <select 
+            <select
               {...register("service", { required: "Please select a service" })}
-              className={`${inputClass} ${errors.service ? "border-red-500 focus:ring-red-100" : "text-slate-700"}`}
+              className={`${inputClass} ${errors.service ? "border-red-500 focus:ring-red-100" : ""}`}
             >
               <option value="">Select a service...</option>
               <option value="Web Design & Development">Web Design & Development</option>
@@ -124,13 +124,10 @@ export default function ContactForm() {
             {errors.service && <p className="text-red-500 text-sm mt-1">{errors.service.message}</p>}
           </div>
 
-          {/* Budget Range (Optional) */}
+          {/* Budget Range */}
           <div className="md:col-span-2">
             <label className={labelClass}>Budget Range (Optional)</label>
-            <select 
-              {...register("budget")}
-              className={`${inputClass} text-slate-700`}
-            >
+            <select {...register("budget")} className={inputClass}>
               <option value="">Select budget range...</option>
               <option value="<$1,000">Less than N500k</option>
               <option value="$1,000-$5,000">N500k - N2M</option>
@@ -143,7 +140,7 @@ export default function ContactForm() {
           {/* Message */}
           <div className="md:col-span-2">
             <label className={labelClass}>Message</label>
-            <textarea 
+            <textarea
               {...register("message", { required: "Message is required" })}
               rows={5}
               className={`${inputClass} resize-none ${errors.message ? "border-red-500 focus:ring-red-100" : ""}`}
@@ -153,10 +150,10 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <button 
+        <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full sm:w-auto px-10 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-blue-900 transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:translate-y-0"
+          className="w-full sm:w-auto px-10 py-4 bg-primary dark:bg-blue-700 text-white rounded-xl font-bold text-lg hover:bg-blue-900 dark:hover:bg-blue-600 transition-all shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:translate-y-0"
         >
           {isSubmitting ? (
             <>
