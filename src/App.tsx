@@ -16,18 +16,46 @@ function App() {
   const [showCookie, setShowCookie] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
 
-  // System dark mode detection
+  // ====================== THEME SYSTEM ======================
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
+
+  // Load saved theme on mount (index.html already handled the visual apply,
+  // this just syncs the React state to match)
   useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
-    const apply = (e: MediaQueryListEvent | MediaQueryList) => {
-      document.documentElement.classList.toggle('dark', e.matches);
-    };
-    apply(media);
-    media.addEventListener('change', apply);
-    return () => media.removeEventListener('change', apply);
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null;
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      setTheme(savedTheme);
+    } else {
+      setTheme('system');
+    }
   }, []);
 
-  // Cookie consent
+  // Listen for system preference changes when in "system" mode
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      if (theme === 'system') {
+        document.documentElement.classList.toggle('dark', media.matches);
+      }
+    };
+    media.addEventListener('change', handleChange);
+    return () => media.removeEventListener('change', handleChange);
+  }, [theme]);
+
+  // Called by the toggle to change theme
+  const setThemeMode = (newTheme: 'light' | 'dark' | 'system') => {
+    setTheme(newTheme);
+    if (newTheme === 'system') {
+      localStorage.removeItem('theme');
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', isDark);
+    } else {
+      localStorage.setItem('theme', newTheme);
+      document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    }
+  };
+
+  // ====================== COOKIE CONSENT ======================
   useEffect(() => {
     const accepted = localStorage.getItem('cookieAccepted');
     if (!accepted) setShowCookie(true);
@@ -80,7 +108,10 @@ function App() {
         >
           <WhatsAppFloating />
           <Preloader />
-          <Navbar />
+
+          {/* ✅ Pass theme + setter to Navbar */}
+          <Navbar theme={theme} setThemeMode={setThemeMode} />
+
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -89,7 +120,9 @@ function App() {
               <Route path="/quote" element={<Quote />} />
             </Routes>
           </main>
-          <Footer />
+
+          {/* ✅ Pass theme + setter to Footer */}
+          <Footer theme={theme} setThemeMode={setThemeMode} />
 
           {/* Cookie Banner */}
           {showCookie && (
@@ -136,42 +169,34 @@ function App() {
 
                 <div className="px-6 py-6 text-sm text-slate-600 dark:text-slate-300 space-y-5 leading-relaxed">
                   <p className="text-xs text-slate-400">Last updated: April 2026</p>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">1. Introduction</h3>
                     <p>DiscoveryTech Hub ("we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit discoverytechhub.com.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">2. Information We Collect</h3>
                     <p>We may collect personal information you provide directly to us, including your name, email address, phone number, and any other details you submit via our contact or quote forms.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">3. How We Use Your Information</h3>
                     <p>We use the information we collect to respond to your enquiries, provide our services, improve our website experience, and communicate with you about our offerings.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">4. Cookies</h3>
                     <p>We use cookies to enhance your browsing experience on our website. Cookies are small files stored on your device that help us understand how visitors interact with our site. You may choose to decline cookies, though some features of the site may not function properly.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">5. Data Sharing</h3>
                     <p>We do not sell, trade, or rent your personal information to third parties. Your data is only used internally to serve you better.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">6. Data Security</h3>
                     <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, or disclosure.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">7. Your Rights</h3>
                     <p>You have the right to request access to, correction of, or deletion of your personal data at any time. To exercise these rights, please contact us at info@discoverytechhub.com.</p>
                   </div>
-
                   <div>
                     <h3 className="font-semibold text-[#0A1F44] dark:text-white mb-1">8. Contact Us</h3>
                     <p>If you have any questions about this Privacy Policy, please reach out to us at{' '}
@@ -193,7 +218,6 @@ function App() {
               </div>
             </div>
           )}
-
         </div>
       </Router>
     </HelmetProvider>
