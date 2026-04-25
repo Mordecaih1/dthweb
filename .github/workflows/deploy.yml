@@ -25,13 +25,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via SFTP
+        uses: burnett01/rsync-deployments@7.0.1
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /discoverytechhub.com/
-          protocol: ftps
-          port: 990
+          switches: -avzr --delete
+          path: dist/
+          remote_path: /home/surricol/discoverytechhub.com/
+          remote_host: discoverytechhub.com
+          remote_port: 21098
+          remote_user: surricol
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
