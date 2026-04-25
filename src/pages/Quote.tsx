@@ -14,7 +14,7 @@ export default function Quote() {
         <meta property="og:url" content="https://discoverytechhub.com/quote" />
         <meta property="og:title" content="Get a Quote | DiscoveryTech Hub" />
         <meta property="og:description" content="Request a free quote from DiscoveryTech Hub for web design, ICT training, graphic design, branding, and more." />
-        <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+        <meta property="og:image" content="https://discoverytechhub.com/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Get a Free Quote - DiscoveryTech Hub" />
@@ -22,7 +22,7 @@ export default function Quote() {
         <meta name="twitter:url" content="https://discoverytechhub.com/quote" />
         <meta name="twitter:title" content="Get a Quote | DiscoveryTech Hub" />
         <meta name="twitter:description" content="Request a free quote from DiscoveryTech Hub for web design, ICT training, graphic design, branding, and more." />
-        <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+        <meta name="twitter:image" content="https://discoverytechhub.com/og.png" />
         <meta name="twitter:image:alt" content="Get a Free Quote - DiscoveryTech Hub" />
       </Helmet>
 

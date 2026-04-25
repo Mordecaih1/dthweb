@@ -14,7 +14,7 @@ export default function Services() {
         <meta property="og:url" content="https://discoverytechhub.com/services" />
         <meta property="og:title" content="Our Services | DiscoveryTech Hub" />
         <meta property="og:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
-        <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+        <meta property="og:image" content="https://discoverytechhub.com/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="DiscoveryTech Hub Services - Web Design, ICT Training & More" />
@@ -22,7 +22,7 @@ export default function Services() {
         <meta name="twitter:url" content="https://discoverytechhub.com/services" />
         <meta name="twitter:title" content="Our Services | DiscoveryTech Hub" />
         <meta name="twitter:description" content="Explore our services including web design, graphic design, ICT training, branding, printing, and ICT consultancy in Nigeria." />
-        <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+        <meta name="twitter:image" content="https://discoverytechhub.com/og.png" />
         <meta name="twitter:image:alt" content="DiscoveryTech Hub Services - Web Design, ICT Training & More" />
       </Helmet>
 

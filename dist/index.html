@@ -2,13 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="/logo.png" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Google Analytics -->
-<meta name="keywords" content="web design Nigeria, ICT training, graphic design, branding, digital transformation, ICT consultancy, Abuja, DiscoveryTech Hub" />
-<meta name="robots" content="index, follow" />
-<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-<!-- Fonts -->
+    
+    <!-- ✅ ANTI-FLASH (FOUC) PROTECTION - Must be the FIRST script in <head> -->
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const root = document.documentElement;
+          
+          if (savedTheme === 'dark') {
+            root.classList.add('dark');
+          } else if (savedTheme === 'light') {
+            root.classList.remove('dark');
+          } else {
+            // Default to system preference
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              root.classList.add('dark');
+            } else {
+              root.classList.remove('dark');
+            }
+          }
+        } catch (e) {
+          // Fallback: do nothing (safe)
+        }
+      })();
+    </script>
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="web design Nigeria, ICT training, graphic design, branding, digital transformation, ICT consultancy, Abuja, DiscoveryTech Hub" />
+    <meta name="robots" content="index, follow" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCE7K80751"></script>
     <script>
@@ -19,25 +44,19 @@
     </script>
 
     <!-- Primary Meta Tags -->
-<title>DiscoveryTech Hub | Your Digital Transformation Partner</title>
-<meta name="description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
-<meta name="keywords" content="web design Nigeria, ICT training, graphic design, branding, digital transformation, ICT consultancy, Abuja, DiscoveryTech Hub" />
-<meta name="author" content="DiscoveryTech Hub" />
-<meta name="robots" content="index, follow" />
-
-    <!-- Canonical fallback -->
+    <title>DiscoveryTech Hub | Your Digital Transformation Partner</title>
+    <meta name="description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
+    <meta name="author" content="DiscoveryTech Hub" />
     <link rel="canonical" href="https://discoverytechhub.com/" />
-
-    <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-D1XIw61J.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Drr2F9EO.css">
+    <script type="module" crossorigin src="/assets/index-CBu1zpDm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-WYKcpw-A.css">
   </head>
+  
   <body class="antialiased min-h-screen flex flex-col scroll-smooth">
     <div id="root" class="flex-grow flex flex-col"></div>
   </body>

@@ -32,7 +32,7 @@ export default function About() {
         <meta property="og:url" content="https://discoverytechhub.com/about" />
         <meta property="og:title" content="About Us | DiscoveryTech Hub" />
         <meta property="og:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
-        <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+        <meta property="og:image" content="https://discoverytechhub.com/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="About DiscoveryTech Hub - ICT Solutions in Nigeria" />
@@ -40,7 +40,7 @@ export default function About() {
         <meta name="twitter:url" content="https://discoverytechhub.com/about" />
         <meta name="twitter:title" content="About Us | DiscoveryTech Hub" />
         <meta name="twitter:description" content="Learn about DiscoveryTech Hub — a premier ICT solutions company in Nigeria driving digital transformation through web design, ICT training, branding, and consultancy." />
-        <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+        <meta name="twitter:image" content="https://discoverytechhub.com/og.png" />
         <meta name="twitter:image:alt" content="About DiscoveryTech Hub - ICT Solutions in Nigeria" />
       </Helmet>
 

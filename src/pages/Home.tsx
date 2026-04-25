@@ -32,7 +32,7 @@ export default function Home() {
         <meta property="og:url" content="https://discoverytechhub.com/" />
         <meta property="og:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
         <meta property="og:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
-        <meta property="og:image" content="https://discoverytechhub.com/logo.png" />
+        <meta property="og:image" content="https://discoverytechhub.com/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="DiscoveryTech Hub - Your Digital Transformation Partner" />
@@ -40,7 +40,7 @@ export default function Home() {
         <meta name="twitter:url" content="https://discoverytechhub.com/" />
         <meta name="twitter:title" content="DiscoveryTech Hub | Your Digital Transformation Partner" />
         <meta name="twitter:description" content="DiscoveryTech Hub offers professional web design, ICT training, graphic design, branding, printing, and ICT consultancy services in Nigeria. Transform your business with us." />
-        <meta name="twitter:image" content="https://discoverytechhub.com/logo.png" />
+        <meta name="twitter:image" content="https://discoverytechhub.com/og.png" />
         <meta name="twitter:image:alt" content="DiscoveryTech Hub - Your Digital Transformation Partner" />
       </Helmet>
 
