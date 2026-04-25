@@ -34,4 +34,4 @@ jobs:
           local-dir: ./dist/
           server-dir: /discoverytechhub.com/
           protocol: ftps
-          port: 21
+          port: 990
