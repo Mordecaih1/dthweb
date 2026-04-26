@@ -34,12 +34,19 @@
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCE7K80751"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-NCE7K80751');
-    </script>
+<!-- Google Analytics - deferred for performance -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NCE7K80751';
+    s.async = true;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NCE7K80751');
+  });
+</script>
 
     <!-- Primary Meta Tags -->
     <title>DiscoveryTech Hub | Your Digital Transformation Partner</title>
@@ -122,7 +129,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-C9oMZTqz.js"></script>
+    <script type="module" crossorigin src="/assets/index-Dbi3kkW7.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-WYKcpw-A.css">
   </head>
   
